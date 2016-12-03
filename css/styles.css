@@ -1,0 +1,271 @@
+/* Bill Adams */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.25;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+/*------ CLEARFIX ------*/
+.clear:before,
+.clear:after {
+    display: table;
+    content: " ";
+}
+.clear:after {
+    clear: both;
+}
+
+/*------ GLOBAL STYLES ------*/
+body {
+    background-color: #426175;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 95%;
+}
+h1, h2, h3, h4 {
+    font-family: Georgia, serif;
+    margin-bottom: .25em;
+}
+h1 {
+    font-size: 1.999em;
+}
+h2 {
+    border-bottom: 1px solid #765325;
+    color: #765325;
+    font-size: 1.414em;    
+    padding-bottom: 1%;
+}
+a:link {
+    
+}
+a:visited {
+    
+}
+a:hover {
+    
+}
+p {
+    margin-bottom: 1em;
+}
+#wrapper {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0 2%;
+}
+header {
+    background-image: url(http://placehold.it/1200x150);
+    color: #ffffff;
+}
+header h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+nav {
+    margin-bottom: 30px;
+}
+nav li {
+    display: inline;
+    text-align: center;
+}
+nav a {
+    background-color: #1B384C;
+    color: white;
+    display: inline-block;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 2% 0;
+    text-decoration: none;
+    width: 32.66%;
+}
+nav a:hover {
+    background-color: white;
+    color: #426175;
+}
+nav li:nth-child(0n+3) a,
+nav li:last-of-type a {
+    margin-right: 0;
+}
+main {
+    margin-bottom: 30px;
+    padding: 0 2%;
+}
+aside {
+    margin-bottom: 30px;
+}
+#game_updates, #latest_news {
+    display: none;
+}
+img {
+    height: auto;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+footer {
+    background-color: #010A10;
+    color: white;
+    font-size: 80%;
+    padding: 2% 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*------ GLOBAL STYLES ------*/
+    body {
+        font-size: 100%;
+    }
+    nav a {
+        margin-right: 1%;
+        width: 15.833%;
+    }
+    nav li:nth-child(0n+3) a {
+        margin-right: 1%;
+        width: 15.84%;
+    }
+
+    /*------ HOME PAGE STYLES ------*/
+    #game_updates, #latest_news {
+        display: block;
+        float: right;
+        padding: 0 2%;
+        width: 36%;
+    }
+    main {
+        float: left;
+        padding: 0 2%;
+        width: 56%;
+    }
+    footer {
+        clear: both;
+    }
+
+    /*------ NEWS PAGE STYLES ------*/
+    .cols_2_main {
+        padding: 0 2%;
+        width: 62%;
+    }
+    .cols_2_aside {
+        float: left;
+        padding: 0 2%;
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    /*------ GLOBAL STYLES ------*/
+    #wrapper {
+        padding: 0;
+    }
+    header {
+        height: 150px;
+    }
+    header h1 {
+        line-height: 150px;
+    }
+    body {
+        font-size: 100%;
+    }
+    nav li {
+        border-right: 1px solid white;
+    }
+    nav li:last-child {
+        border-right: none;
+    }
+    nav a {
+        margin-right: 0;
+        width: 16.58%;
+    }
+    nav li:last-child a {
+        width: 16.68%;
+    }
+    nav li:nth-child(0n+3) a{
+        margin-right: 0;
+    }
+
+    /*------ HOME PAGE STYLES ------*/
+    #wrapper {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 98%;
+    }
+    #game_updates, #latest_news {
+        display: block;
+    }
+    #game_updates {
+        float: left;
+        padding: 0 2%;
+        width: 18%;
+    }
+    main {
+        float: left;
+        padding: 0 2%;
+        width: 52%;
+    }
+    .cols_2_main {
+        padding: 0 2%;
+        width: 62%;
+    }
+    .cols_2_aside {
+        float: left;
+        padding: 0 2%;
+        width: 30%;
+    }
+    #latest_news {
+        float: right;
+        padding: 0 2%;
+        width: 18%;
+    }
+    footer {
+        clear: both;
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width: 1218px) {
+    nav li:last-child a {
+        width: 16.6%;
+    }
+}
