@@ -60,34 +60,23 @@ table {
 }
 
 /*------ GLOBAL STYLES ------*/
-@font-face {
-    font-family: Plainwalker;
-    src: url("../fonts/Planewalker.otf");
-}
 body {
     background-color: #426175;
     font-family: Verdana, Arial, sans-serif;
     font-size: 95%;
 }
 h1, h2, h3, h4 {
-    font-family: Plainwalker, serif;
+    font-family: Georgia, serif;
     margin-bottom: .25em;
 }
 h1 {
-    font-size: 3.998em;
-    text-shadow: 2px 2px 1px #000000;
+    font-size: 1.999em;
 }
 h2 {
     border-bottom: 1px solid #765325;
     color: #765325;
-    font-size: 1.999em;    
+    font-size: 1.414em;    
     padding-bottom: 1%;
-}
-h3 {
-    font-size: 1.414em;
-}
-h4 {
-    font size:  1em;
 }
 a:link {
     
@@ -107,7 +96,7 @@ p {
     margin: 0 2%;
 }
 header {
-    background-image: url("../img/eso_banner.jpg");
+    background-image: url(http://placehold.it/1200x150);
     color: #ffffff;
 }
 header h1 {
@@ -146,25 +135,8 @@ main {
 aside {
     margin-bottom: 30px;
 }
-aside p {
-    font-size: .90em;
-}
 #game_updates, #latest_news {
     display: none;
-}
-.frame_container {
-    height: 0;
-    margin-bottom: 30px;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-}
-.frame_container iframe {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top:0;
-      width: 100%;
 }
 img {
     height: auto;
