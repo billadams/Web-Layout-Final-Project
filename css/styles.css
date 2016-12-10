@@ -69,9 +69,12 @@ body {
     font-family: Verdana, Arial, sans-serif;
     font-size: 95%;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: Plainwalker, serif;
     margin-bottom: .25em;
+}
+h2, h3, h4, h5 {
+    color: #765325;
 }
 h1 {
     font-size: 3.998em;
@@ -79,15 +82,21 @@ h1 {
 }
 h2 {
     border-bottom: 1px solid #765325;
-    color: #765325;
+    /* color: #765325; */
     font-size: 1.999em;    
     padding-bottom: 1%;
 }
 h3 {
+    border-bottom: 1px solid #765325;
+
     font-size: 1.414em;
 }
 h4 {
-    font size:  1em;
+    font-size:  1em;
+    font-weight: bold;
+}
+h5 {
+    font-size: .95em;
 }
 a:link {
     
@@ -142,6 +151,14 @@ nav li:last-of-type a {
 main, aside {
     margin-bottom: 30px;
     padding: 0 2%;
+}
+main ul {
+    font-size: 90%;
+    margin-bottom: 1em;
+}
+main li {
+    margin-left: 2em;
+    list-style-type: disc;
 }
 aside p {
     font-size: .90em;
