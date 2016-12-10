@@ -139,15 +139,15 @@ nav li:nth-child(0n+3) a,
 nav li:last-of-type a {
     margin-right: 0;
 }
-main {
+main, aside {
     margin-bottom: 30px;
     padding: 0 2%;
 }
-aside {
-    margin-bottom: 30px;
-}
 aside p {
     font-size: .90em;
+}
+.sidenav {
+    display: none;
 }
 #game_updates, #latest_news {
     display: none;
@@ -179,8 +179,31 @@ footer {
     text-align: center;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width:768px) {
+    /*------ CLASSES PAGE STYLES ------*/
+    main.right {
+        float: right;
+    }
+    .sidenav {
+        display: block;
+        text-align: center;
+    }
+    .sidenav ul {
+        background: #eaeaea;
+    }
+    .sidenav li {
+        /* padding: 1% 0; */
+    }
+    .sidenav a {
+        display: inline-block;
+        padding: 10px;
+    }
+    .sidenav a:hover {
+        text-decoration: none;
+    }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     /*------ GLOBAL STYLES ------*/
     body {
         font-size: 100%;
@@ -223,7 +246,6 @@ footer {
 }
 
 @media only screen and (min-width: 1025px) {
-
     /*------ GLOBAL STYLES ------*/
     #wrapper {
         padding: 0;
@@ -286,6 +308,11 @@ footer {
         float: right;
         padding: 0 2%;
         width: 18%;
+    }
+
+    /*------ CLASSES PAGE STYLES ------*/
+    .sidenav {
+        top: 40%;
     }
     footer {
         clear: both;

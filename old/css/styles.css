@@ -60,23 +60,34 @@ table {
 }
 
 /*------ GLOBAL STYLES ------*/
+@font-face {
+    font-family: Plainwalker;
+    src: url("../fonts/Planewalker.otf");
+}
 body {
     background-color: #426175;
     font-family: Verdana, Arial, sans-serif;
     font-size: 95%;
 }
 h1, h2, h3, h4 {
-    font-family: Georgia, serif;
+    font-family: Plainwalker, serif;
     margin-bottom: .25em;
 }
 h1 {
-    font-size: 1.999em;
+    font-size: 3.998em;
+    text-shadow: 2px 2px 1px #000000;
 }
 h2 {
     border-bottom: 1px solid #765325;
     color: #765325;
-    font-size: 1.414em;    
+    font-size: 1.999em;    
     padding-bottom: 1%;
+}
+h3 {
+    font-size: 1.414em;
+}
+h4 {
+    font size:  1em;
 }
 a:link {
     
@@ -96,7 +107,7 @@ p {
     margin: 0 2%;
 }
 header {
-    background-image: url(http://placehold.it/1200x150);
+    background-image: url("../img/eso_banner.jpg");
     color: #ffffff;
 }
 header h1 {
@@ -128,15 +139,32 @@ nav li:nth-child(0n+3) a,
 nav li:last-of-type a {
     margin-right: 0;
 }
-main {
+main, aside {
     margin-bottom: 30px;
     padding: 0 2%;
 }
-aside {
-    margin-bottom: 30px;
+aside p {
+    font-size: .90em;
+}
+.sidenav {
+    display: none;
 }
 #game_updates, #latest_news {
     display: none;
+}
+.frame_container {
+    height: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.frame_container iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top:0;
+      width: 100%;
 }
 img {
     height: auto;
@@ -151,8 +179,43 @@ footer {
     text-align: center;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width:768px) {
+    /*------ CLASSES PAGE STYLES ------*/
+    main.right {
+        float: right;
+        /* margin-left: 30%; */
+/*         position: relative;
+        z-index: 1; */
+    }
+    .sidenav {
+        /* background-color: lightblue; */
+        display: block;
+        /* position: fixed; */
+        text-align: center;
+        /* top: 40%; */
+    }
+    .sidenav ul {
+        /* position: fixed; */
+        /* top: 40%; */
+    }
+    .sidenav li {
+/*         border-bottom: 1px solid #eaeaea;
+        height: 50px;
+        line-height: 50px; */
+        /* padding: 1% 0; */
+    }
+    .sidenav a {
+        display: block;
+        padding: 5px;
+    }
+    .sidenav a:hover {
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+        border-radius: 5px;
+    }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     /*------ GLOBAL STYLES ------*/
     body {
         font-size: 100%;
@@ -195,7 +258,6 @@ footer {
 }
 
 @media only screen and (min-width: 1025px) {
-
     /*------ GLOBAL STYLES ------*/
     #wrapper {
         padding: 0;
@@ -258,6 +320,11 @@ footer {
         float: right;
         padding: 0 2%;
         width: 18%;
+    }
+
+    /*------ CLASSES PAGE STYLES ------*/
+    .sidenav {
+        /* top: 40%; */
     }
     footer {
         clear: both;
