@@ -233,6 +233,18 @@ footer {
         margin-right: 1%;
         width: 15.84%;
     }
+    .cols_2_main {
+        padding: 0 2%;
+        width: 62%;
+    }
+    .cols_2_aside {
+        float: left;
+        padding: 0 2%;
+        width: 30%;
+    }
+    #mobile-sidenav {
+        display: none;
+    }
 
     /*------ HOME PAGE STYLES ------*/
     #game_updates, #latest_news {
@@ -248,17 +260,6 @@ footer {
     }
     footer {
         clear: both;
-    }
-
-    /*------ NEWS PAGE STYLES ------*/
-    .cols_2_main {
-        padding: 0 2%;
-        width: 62%;
-    }
-    .cols_2_aside {
-        float: left;
-        padding: 0 2%;
-        width: 30%;
     }
 }
 
@@ -292,7 +293,9 @@ footer {
     nav li:nth-child(0n+3) a{
         margin-right: 0;
     }
-
+    #mobile-sidenav {
+        display: none;
+    }
     /*------ HOME PAGE STYLES ------*/
     #wrapper {
         margin: 0 auto;

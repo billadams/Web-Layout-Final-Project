@@ -10,6 +10,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
 	<![endif]-->
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous">
+  	</script>
+  	<script src="js/jquery.sticky-kit.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -27,7 +33,7 @@
 				><li><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<aside role="navigation" class="cols_2_aside sidenav">
+		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -98,7 +104,9 @@
 			</ul>
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
-
 	</div>
+	<script>
+  		$("#sticky_item").stick_in_parent();
+	</script>
 </body>
 </html>
