@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Classes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -19,7 +20,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -33,7 +33,7 @@
 				><li><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -46,12 +46,29 @@
 			<h2>Character Classes</h2>
 			<p>The Elder Scrolls Online has four main character classes: Dragonknight, Sorcerer, Nightblade, and Templar.</p>
 			<p>Choosing a class determines which class-specific skill lines are available. Certain character classes are more well-suited to specific roles than others, however any class can fulfill any role. The three major roles are tank, healer, and <abbr title="Damage Per Second">DPS</abbr>. Generally the Dragonknight is a tank, the templar a healer, and either a sorcerer or nightblade fill the <abbr title="Damage Per Second">DPS</abbr> role. As stated earlier, these are just general guidelines for class usage.</p>
+			<a id="mobile-sidenav" href="#sidr">Show all character classes >></a>
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="dragonknight.html">Dragonknight</a></li>
+						<li><a href="sorcerer.html">Sorcerer</a></li>
+						<li><a href="nightblade.html">Nightblade</a></li>
+						<li><a href="templar.html">Templar</a></li>
+					</ul>
+				</aside>
+			</div>		
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
-
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
+	</script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
 	</script>
 </body>
 </html>

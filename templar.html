@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Classes - Templar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -19,7 +20,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -32,8 +32,8 @@
 				><li><a href="resources.html">Resources</a></li
 				><li><a href="about.html">About</a></li>
 			</ul>
-		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		</nav>	
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		</aside>
 		<main role="main" class="cols_2_main right">
-			<img src="img/templar.jpg">
+			<img src="img/templar.jpg" alt="Templar" title="Templar">
 			<h2>Templar</h2>
 			<p><strong>[In-Game Description] -</strong> These traveling knights call upon the powers of light and the burning sun to deal massive damage to their enemies while restoring health, magicka, and stamina to their allies.</p>
 			<p>Templars make great healers as they have an entire skill line devoted to it. The Templars kit is the most diverse in the game. The Aedric Spear skill line does damage and stuns enemies. Dawn's Wrath debuffs and has one of the most powerful finishers in the game. Restoring Light offers protections as well as healing.</p>
@@ -102,11 +102,29 @@
 				<li>Light Weaver</li>
 				<li>Master Ritualist</li>
 			</ul>
+			<a id="mobile-sidenav" href="#sidr">Show all character classes >></a>			
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="dragonknight.html">Dragonknight</a></li>
+						<li><a href="sorcerer.html">Sorcerer</a></li>
+						<li><a href="nightblade.html">Nightblade</a></li>
+						<li><a href="templar.html">Templar</a></li>
+					</ul>
+				</aside>
+			</div>			
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
+	</script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
 	</script>
 </body>
 </html>

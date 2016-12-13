@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Classes - Dragonknight</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -19,7 +20,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -32,8 +32,8 @@
 				><li><a href="resources.html">Resources</a></li
 				><li><a href="about.html">About</a></li>
 			</ul>
-		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		</nav>	
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		</aside>
 		<main role="main" class="cols_2_main right">
-			<img src="img/dragonknight.jpg">
+			<img src="img/dragonknight.jpg" alt="Dragonknight" title="Dragonknight">
 			<h2>Dragonknight</h2>
 			<p><strong>[In-Game Description] -</strong> These skillful masters-at-arms use the ancient Akaviri martial arts tradition of battle-spirit, and wield fearsome magic that pounds, shatters and physically alters the world around them.</p>
 			<p>Dragonknight's generally are used as tanks in <abbr title="Elder Scrolls Online">ESO</abbr>. They do fairly well as mages thanks to the Ardent Flame skill line which does fire damage. They also do well in <abbr title="Player Versus Player">PVP</abbr> situations since the Draconic Power skill line provides self-healing. Finally, the Earthen Heart skill line has lots of utility for defense and group support.</p>
@@ -102,12 +102,29 @@
 				<li>Mountain's Blessing</li>
 				<li>Helping Hands</li>
 			</ul>
+			<a id="mobile-sidenav" href="#sidr">Show all character classes >></a>			
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="dragonknight.html">Dragonknight</a></li>
+						<li><a href="sorcerer.html">Sorcerer</a></li>
+						<li><a href="nightblade.html">Nightblade</a></li>
+						<li><a href="templar.html">Templar</a></li>
+					</ul>
+				</aside>
+			</div>			
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
-
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
+	</script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
 	</script>
 </body>
 </html>

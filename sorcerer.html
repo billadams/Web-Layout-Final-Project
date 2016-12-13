@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Classes - Sorcerer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -19,7 +20,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -33,7 +33,7 @@
 				><li><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		</aside>
 		<main role="main" class="cols_2_main right">
-			<img src="img/sorcerer.jpg">
+			<img src="img/sorcerer.jpg" alt="Sorcerer" title="Sorcerer">
 			<h2>Sorcerer</h2>
 			<p><strong>[In-Game Description] -</strong> Sorcerers summon and control weather phenomenon: hurling lightning bolts and creating electrified fields, summoning tornadoes and impenetrable fog, and calling upon Daedric forces to summon Storm Atronachs and magical armor.</p>
 			<p>Sorcerers generally are used as a <abbr title="Damage Per Second">DPS</abbr>. The majority of damage dealing spells are lightning based. The sorcerer also has the ability to summon pets which can summon pets which can fight along side them. The Daedric Summoning line offers damage and stuns. Dark Magic offers support by removing debuffs, restoring health and magicka, in addition to stuns and knockdowns. Storm Calling offers damage and <abbr title="Area of Effect">AoE</abbr> skills.</p>
@@ -102,11 +102,29 @@
 				<li>Daedric Protection</li>
 				<li>Expert Summoner</li>
 			</ul>
+			<a id="mobile-sidenav" href="#sidr">Show all character classes >></a>			
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="dragonknight.html">Dragonknight</a></li>
+						<li><a href="sorcerer.html">Sorcerer</a></li>
+						<li><a href="nightblade.html">Nightblade</a></li>
+						<li><a href="templar.html">Templar</a></li>
+					</ul>
+				</aside>
+			</div>		
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
+	</script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
 	</script>
 </body>
 </html>

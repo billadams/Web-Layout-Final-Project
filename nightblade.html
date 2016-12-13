@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Classes - Nightblade</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -18,7 +19,6 @@
   	<script src="js/jquery.sticky-kit.js"></script></head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -32,7 +32,7 @@
 				><li><a href="about.html">About</a></li>
 			</ul>
 		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="dragonknight.html">Dragonknight</a></li>
 				<li><a href="sorcerer.html">Sorcerer</a></li>
@@ -41,7 +41,7 @@
 			</ul>
 		</aside>
 		<main role="main" class="cols_2_main right">
-			<img src="img/nightblade.jpg">
+			<img src="img/nightblade.jpg" alt="Nightblade" title="Nightblade">
 			<h2>Nightblade</h2>
 			<p><strong>[In-Game Description] -</strong> Nightblades are adventurers and opportunists with a gift for getting in and out of trouble. Relying variously on stealth, blades, and speed, Nightblades thrive on conflict and misfortune, trusting to their luck and cunning to survive.</p>
 			<p>The Nightblade features both stealth and health-draining skills, in addition to high burst damage attacks. Nightblades are almost always going to be used as <abbr title="Damage Per Second">DPS</abbr>. In <abbr title="Player Versus Player">PVP</abbr>, they're often used to take out high-priority targets, such as enemy healers. If the enemy team's healers are dead, the remaining foes are that much easier to eliminate. The Assassination line offers damage and debuffs. Shadow does <abbr title="Area of Effect">AoE</abbr> damage in addition to debuffing. Siphoning has <abbr title="Damage over Time">DoT</abbr> as well as buffs.</p>
@@ -101,11 +101,29 @@
 				<li>Soul Siphoner</li>
 				<li>Transfer</li>
 			</ul>
+			<a id="mobile-sidenav" href="#sidr">Show all character classes >></a>			
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="dragonknight.html">Dragonknight</a></li>
+						<li><a href="sorcerer.html">Sorcerer</a></li>
+						<li><a href="nightblade.html">Nightblade</a></li>
+						<li><a href="templar.html">Templar</a></li>
+					</ul>
+				</aside>
+			</div>				
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
+	</script>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
 	</script>
 </body>
 </html>

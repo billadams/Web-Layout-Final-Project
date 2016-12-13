@@ -1,5 +1,11 @@
 /* Bill Adams */
-
+/*
+    Dark blue:      #021421;
+    Medium blue:    #1b384c;
+    Light blue:     #456277;
+    Goldish:        #332600;
+    Light brown:    #b97c66;
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -31,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    line-height: 1.25;
+    line-height: 1.4;
 }
 ol, ul {
     list-style: none;
@@ -65,7 +71,7 @@ table {
     src: url("../fonts/Planewalker.otf");
 }
 body {
-    background-color: #426175;
+    background-color: #eaeaea;
     font-family: Verdana, Arial, sans-serif;
     font-size: 95%;
 }
@@ -74,21 +80,19 @@ h1, h2, h3, h4, h5 {
     margin-bottom: .25em;
 }
 h2, h3, h4, h5 {
-    color: #765325;
+    color: #332600;
 }
 h1 {
-    font-size: 3.998em;
-    text-shadow: 2px 2px 1px #000000;
+    font-size: 2.25em;
+    text-shadow: 2px 2px 1px #332600;
 }
 h2 {
-    border-bottom: 1px solid #765325;
-    /* color: #765325; */
+    border-bottom: 1px solid #332600;
     font-size: 1.999em;    
     padding-bottom: 1%;
 }
 h3 {
-    border-bottom: 1px solid #765325;
-
+    border-bottom: 1px solid #332600;
     font-size: 1.414em;
 }
 h4 {
@@ -99,24 +103,26 @@ h5 {
     font-size: .95em;
 }
 a:link {
-    
+    color: #b97c66;
 }
 a:visited {
-    
+    color: #b97c66;
 }
 a:hover {
-    
+    text-decoration: none;
 }
 p {
     margin-bottom: 1em;
 }
 #wrapper {
     background-color: #ffffff;
-    color: #000000;
+    box-shadow: 0 0 3px #aaaaaa;
+    color: #333333;
     margin: 0 2%;
 }
 header {
-    background-image: url("../img/eso_banner.jpg");
+    background-image: url("../img/banner-wide.jpg");
+    background-repeat: no-repeat;
     color: #ffffff;
 }
 header h1 {
@@ -132,7 +138,6 @@ nav li {
 }
 nav a {
     background-color: #1B384C;
-    color: white;
     display: inline-block;
     margin-right: 1%;
     margin-bottom: 1%;
@@ -140,9 +145,15 @@ nav a {
     text-decoration: none;
     width: 32.66%;
 }
+nav a:link {
+    color: #eaeaea;
+}
+nav a:visited {
+    color: #eaeaea;
+}
 nav a:hover {
     background-color: white;
-    color: #426175;
+    color: #456277;
 }
 nav li:nth-child(0n+3) a,
 nav li:last-of-type a {
@@ -188,34 +199,74 @@ img {
     margin-bottom: 30px;
     max-width: 100%;
 }
+img.mobile-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 footer {
-    background-color: #010A10;
-    color: white;
+    background-color: #021421;
+    color: #eaeaea;
     font-size: 80%;
     padding: 2% 0;
     text-align: center;
 }
+strong {
+    font-weight: bold;
+}
+abbr {
+    border-bottom: 1px dotted #333333;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+#checkLabel {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+input:not([type="submit"]):not([type="checkbox"]), textarea {
+    padding: 1%;
+    margin-bottom: 5px;
+    width: 98%;
+}
+input[type="submit"] {
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+    width: 100px;
+}
 
 @media only screen and (min-width:768px) {
+    h1 {
+    font-size: 3.998em;
+    }
     /*------ CLASSES PAGE STYLES ------*/
     main.right {
         float: right;
     }
     .sidenav {
         display: block;
+        font-size: 95%;
         text-align: center;
     }
-    .sidenav ul {
-        background: #eaeaea;
-    }
     .sidenav li {
-        /* padding: 1% 0; */
+        background-color: #456277;
+        margin-bottom: 1px;
     }
     .sidenav a {
-        display: inline-block;
-        padding: 10px;
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+    .sidenav a:link {
+        color: #eaeaea;
+    }
+    .sidenav a:visited {
+        color: #eaeaea;
     }
     .sidenav a:hover {
+        background-color: #2d485b;
         text-decoration: none;
     }
 }
@@ -261,6 +312,13 @@ footer {
     footer {
         clear: both;
     }
+
+    /*------ ROLES PAGE STYLES ------*/
+    img.mobile-center {
+        display: inline;
+        float: right;
+        padding: 0 0 20px 20px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -296,6 +354,12 @@ footer {
     #mobile-sidenav {
         display: none;
     }
+        img.mobile-center {
+        display: inline;
+        float: right;
+        padding: 0 0 20px 20px;
+    }
+    
     /*------ HOME PAGE STYLES ------*/
     #wrapper {
         margin: 0 auto;

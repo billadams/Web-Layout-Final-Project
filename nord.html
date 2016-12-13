@@ -6,6 +6,7 @@
 	<title>Elder Scrolls Outpost: Character Races - Nord</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery.sidr.light.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
 		</script>
@@ -19,7 +20,6 @@
 </head>
 <body>
 	<div id="wrapper">
-
 		<header role="banner">
 			<h1>Elder Scrolls Outpost</h1>
 		</header>
@@ -32,8 +32,8 @@
 				><li><a href="resources.html">Resources</a></li
 				><li><a href="about.html">About</a></li>
 			</ul>
-		</nav>
-		<aside role="navigation" id="sticky_item" class="cols_2_aside sidenav">
+		</nav>	
+		<aside id="sticky_item" class="cols_2_aside sidenav">
 			<ul>
 				<li><a href="nord.html">Nord</a></li>
 				<li><a href="redguard.html">Redguard</a></li>
@@ -60,11 +60,35 @@
 				<li>Resist Frost</li>
 				<li>Rugged</li>
 			</ul>
+			<a id="mobile-sidenav" href="#sidr">Show all character races >></a>			
+			<!-- mobile side menu -->
+			<div id="sidr">
+				<aside class="cols_2_aside sidr_sidenav">
+					<ul>
+						<li><a href="nord.html">Nord</a></li>
+						<li><a href="redguard.html">Redguard</a></li>
+						<li><a href="breton.html">Breton</a></li>
+						<li><a href="imperial.html">Imperial</a></li>
+						<li><a href="dunmer.html">Dunmer (Dark Elves)</a></li>
+						<li><a href="altmer.html">Altmer (High Elves)</a></li>
+						<li><a href="bosmer.html">Bosmer (Wood Elves)</a></li>
+						<li><a href="orsimer.html">Orsimer (Orcs)</a></li>
+						<li><a href="khajiit.html">Khajiit</a></li>
+						<li><a href="argonian.html">Argonian</a></li>
+					</ul>
+				</aside>
+			</div>			
 		</main>
 		<footer role="contentinfo">Copyright &copy; 2016</footer>
 	</div>
 	<script>
   		$("#sticky_item").stick_in_parent();
 	</script>
-</body>
+	<script src="js/jquery.sidr.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('#mobile-sidenav').sidr();
+		});
+	</script>
+	</body>
 </html>
